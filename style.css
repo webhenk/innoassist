@@ -121,29 +121,14 @@ details p { padding: 0 1rem 1rem 0; }
 .benefit-band { background: var(--blue-tint); }
 .benefit-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  column-gap: clamp(2rem, 6vw, 6rem);
   padding-block: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
-}
-.benefit-photo {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  background: #dfd5c7;
-  aspect-ratio: 1.33;
-}
-.benefit-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 74%; }
-.benefit-photo h2 {
-  position: absolute;
-  inset: 0 0 auto;
-  padding: clamp(1.25rem, 3vw, 2.5rem);
-  background: linear-gradient(to bottom, rgba(248,244,238,.96), rgba(248,244,238,.8) 68%, transparent);
-  font-size: clamp(2rem, 3vw, 3rem);
+  align-items: start;
 }
 .benefit-content dt { font-weight: 700; }
 .benefit-content dd { margin: .2rem 0 1rem; color: var(--text); }
-.process-details { border-top: 1px solid var(--border); }
+.process-details { grid-column: 2; border-top: 1px solid var(--border); }
 
 .burden-figure {
   padding: clamp(1.25rem, 3vw, 2rem);
@@ -181,8 +166,7 @@ details p { padding: 0 1rem 1rem 0; }
     gap: 1.25rem;
   }
   .benefit-layout { grid-template-columns: 1fr; gap: 1.5rem; }
-  .benefit-photo { aspect-ratio: 1.85; }
-  .benefit-photo h2 { font-size: 1.9rem; }
+  .process-details { grid-column: 1; }
 }
 
 @media (max-width: 850px) {

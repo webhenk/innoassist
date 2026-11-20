@@ -85,21 +85,23 @@
   max-width: 68ch;
 }
 
-.burden {
+.services-intro {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   gap: clamp(2rem, 8vw, 8rem);
   align-items: center;
 }
 
 .burden-figure {
-  max-width: 28rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--tint);
+  border-radius: 1rem;
 }
 
 .burden-figure strong {
   display: block;
   margin-bottom: .65rem;
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(3.75rem, 6vw, 5.5rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -.055em;
@@ -119,12 +121,8 @@
   text-underline-offset: .15em;
 }
 
-.burden-copy p {
-  margin-top: 1rem;
-}
-
 @media (max-width: 650px) {
-  .burden {
+  .services-intro {
     grid-template-columns: 1fr;
     gap: 1.75rem;
   }

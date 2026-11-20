@@ -85,21 +85,49 @@
   max-width: 68ch;
 }
 
-.context-note {
-  margin-top: 2rem;
-  padding: 1rem 1.25rem;
-  background: var(--tint);
-  border-radius: .5rem;
+.burden {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  align-items: center;
 }
 
-.context-note p {
-  margin-top: .25rem;
-  font-size: .94rem;
+.burden-figure {
+  max-width: 28rem;
 }
 
-.context-note a {
+.burden-figure strong {
+  display: block;
+  margin-bottom: .65rem;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.055em;
   color: var(--blue-ink);
+}
+
+.burden-figure p {
+  font-size: 1.125rem;
+  color: var(--ink);
+}
+
+.burden-figure a {
+  display: inline-block;
+  margin-top: .75rem;
+  font-size: .88rem;
+  color: var(--text);
   text-underline-offset: .15em;
+}
+
+.burden-copy p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 650px) {
+  .burden {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
 }
 
 @media (max-width: 850px) {
